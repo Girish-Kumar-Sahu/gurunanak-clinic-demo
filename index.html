@@ -16,7 +16,58 @@
             line-height: 1.6;
             color: #333;
         }
-        
+        /* Horizontal Side-by-Side Gallery Container */
+.photo-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 5%;
+  overflow-x: auto; /* Enables smooth horizontal scroll on smaller screens */
+  white-space: nowrap;
+}
+
+/* Individual Photo Card */
+.photo-card {
+  flex: 1 1 0px;            /* Equal width distribution for all 3 cards */
+  min-width: 250px;         /* Prevents cards from crushing on small screens */
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border, #333);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Fit - Full Photo Maintained */
+.photo-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;      /* Keeps the whole photo visible */
+  background-color: #000;   /* Clean background fill */
+  display: block;
+}
+
+/* Photo Caption */
+.photo-caption {
+  padding: 0.8rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  background: var(--bg-surface, #2a2a2a);
+  margin-top: auto;         /* Pins caption to the bottom evenly */
+}
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -403,7 +454,26 @@
             </div>
         </div>
     </section>
-    
+    <div class="photo-gallery">
+  <div class="photo-card">
+    <img src="1.png" alt="Serenity Spa Front Signboard">
+   
+  </div>
+  
+  <div class="photo-card">
+    <img src="2.png" alt="Serenity Spa Interior">
+  
+  </div>
+
+  <div class="photo-card">
+    <img src="3.png" alt="Clinic Reception Desk">
+
+  </div>
+</div>
+
+
+
+
     <!-- Highlights Section -->
     <section class="highlights">
         <div class="container">
