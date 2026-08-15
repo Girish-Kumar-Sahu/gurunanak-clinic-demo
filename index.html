@@ -3,539 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gurunanak Dental Clinic - Best Dental Care in Bilaspur</title>
+    <title>ARC & PARC Clinics - CMD College, Bilaspur</title>
     <style>
+        :root {
+            --primary: #1b4f72;
+            --secondary: #283747;
+            --accent: #2e86c1;
+            --bg-light: #f4f6f7;
+            --text-dark: #2c3e50;
+        }
+
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             line-height: 1.6;
-            color: #333;
         }
-        /* Horizontal Side-by-Side Gallery Container */
-.photo-gallery {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 5%;
-  overflow-x: auto; /* Enables smooth horizontal scroll on smaller screens */
-  white-space: nowrap;
-}
 
-/* Individual Photo Card */
-.photo-card {
-  flex: 1 1 0px;            /* Equal width distribution for all 3 cards */
-  min-width: 250px;         /* Prevents cards from crushing on small screens */
-  background: #1e1e1e;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border, #333);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.photo-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Image Fit - Full Photo Maintained */
-.photo-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: contain;      /* Keeps the whole photo visible */
-  background-color: #000;   /* Clean background fill */
-  display: block;
-}
-
-/* Photo Caption */
-.photo-caption {
-  padding: 0.8rem 1rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #ffffff;
-  text-align: center;
-  background: var(--bg-surface, #2a2a2a);
-  margin-top: auto;         /* Pins caption to the bottom evenly */
-}
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1.5rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-        
-        nav {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
-        }
-        
-        nav a:hover {
-            opacity: 0.8;
-        }
-        
-        .hero {
-            background: linear-gradient(rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23667eea" width="1200" height="600"/></svg>');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #ff6b6b;
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s;
-            margin: 0 0.5rem;
-        }
-        
-        .cta-button:hover {
-            background: #ff5252;
-        }
-        
         .container {
+            width: 90%;
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            margin: auto;
         }
-        
-        section {
-            padding: 4rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #667eea;
-        }
-        
-        .about {
-            background: #f8f9ff;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .about h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #333;
-        }
-        
-        .about p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-        
-        .clinic-info {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            margin-top: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        
-        .clinic-info h3 {
-            color: #667eea;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-        
-        .info-item {
-            margin-bottom: 1rem;
+
+        /* 
+         * Uncropped Responsive Image System:
+         * Prevents clipping, stretching, or cropping on all viewports.
+         */
+        .img-container {
+            width: 100%;
             display: flex;
-            align-items: start;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
         }
-        
-        .info-icon {
-            color: #ff6b6b;
-            font-weight: bold;
-            margin-right: 1rem;
-            font-size: 1.2rem;
+
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 420px;
+            object-fit: contain;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        
-        .services {
-            background: white;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .service-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .highlights {
-            background: #f8f9ff;
-        }
-        
-        .highlights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .highlight-box {
-            background: white;
-            padding: 2rem;
-            border-left: 4px solid #667eea;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .highlight-box h3 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-        }
-        
-        .contact-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .contact-item {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 10px;
-        }
-        
-        .contact-item h3 {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-        
-        .contact-item a, .contact-item p {
+
+        /* --- 1. Hero Header Section (Photo 1) --- */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: #fff;
-            text-decoration: none;
+            padding: 50px 0;
         }
-        
-        .contact-item a:hover {
-            text-decoration: underline;
+
+        .hero-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
         }
-        
-        .rating {
-            background: white;
-            color: #333;
-            padding: 1rem;
-            border-radius: 5px;
-            margin-top: 1rem;
+
+        .hero-text {
+            flex: 1 1 450px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-img-wrap {
+            flex: 1 1 400px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 20px;
             font-weight: bold;
+            font-size: 0.95rem;
+            margin-top: 15px;
+            letter-spacing: 0.5px;
         }
-        
-        .stars {
-            color: #ffc107;
-            font-size: 1.2rem;
+        .open { background-color: #27ae60; color: white; }
+        .closed { background-color: #c0392b; color: white; }
+
+        /* --- 2. About Section (Photo 2) --- */
+        .section-about {
+            background: #ffffff;
+            padding: 60px 0;
         }
-        
+
+        .about-flex {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1 1 450px;
+        }
+
+        .about-img-wrap {
+            flex: 1 1 400px;
+        }
+
+        /* --- 3. Services Section (Photo 3) --- */
+        .section-services {
+            padding: 60px 0;
+            background: var(--bg-light);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .banner-wrap {
+            width: 100%;
+        }
+
+        .banner-wrap .responsive-img {
+            max-height: 480px;
+            width: 100%;
+        }
+
+        /* --- 4. Contact Footer Section (Photo 4) --- */
         footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
+            background: var(--secondary);
+            color: #ecf0f1;
+            padding: 60px 0;
         }
-        
+
+        .footer-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-info {
+            flex: 1 1 450px;
+        }
+
+        .footer-info h3 {
+            color: #5dade2;
+            margin-bottom: 20px;
+        }
+
+        .footer-img-wrap {
+            flex: 1 1 400px;
+        }
+
+        /* Mobile Layout Adjustment */
         @media (max-width: 768px) {
-            nav {
+            .hero-flex, .about-flex, .footer-flex {
                 flex-direction: column;
-                gap: 1rem;
+                text-align: center;
             }
-            
-            .about-content {
-                grid-template-columns: 1fr;
+            .hero-text h1 {
+                font-size: 1.8rem;
             }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
+            .responsive-img {
+                max-height: 320px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
+
+    <!-- 1. Hero Header (Photo 1) -->
     <header>
-        <div class="header-container">
-            <div class="logo">🦷 GURUNANAK DENTAL CLINIC</div>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-            </nav>
+        <div class="container hero-flex">
+            <div class="hero-text">
+                <h1>ARC & PARC Clinics</h1>
+                <p>Chhattisgarh's Pioneer Dedicated Rheumatology & Internal Medicine Center</p>
+                <div id="clinic-status" class="status-badge">Checking status...</div>
+            </div>
+            <div class="hero-img-wrap img-container">
+                <img src="1.png" alt="" class="responsive-img">
+            </div>
         </div>
     </header>
-    
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Your Smile is Our Priority</h1>
-            <p>Expert Dental Care in Dayalband, Bilaspur</p>
-            <a href="#contact" class="cta-button">Book Appointment</a>
-            <a href="#services" class="cta-button">View Services</a>
+
+    <!-- 2. About Section (Photo 2) -->
+    <section class="section-about">
+        <div class="container about-flex">
+            <div class="about-img-wrap img-container">
+                <img src="2.png" alt="" class="responsive-img">
+            </div>
+            <div class="about-text">
+                <h2>About ARC & PARC Clinics</h2>
+                <p>Established on July 1st, 2004, ARC & PARC Clinics is Chhattisgarh's first specialized center for Advanced Rheumatology, Arthritis Care, and Internal Medicine. Founded by Dr. Jagbir Singh and Dr. Shikha Singh, the clinic delivers expert clinical evaluations and patient rehabilitation near CMD College, Bilaspur.</p>
+            </div>
         </div>
     </section>
-    
-    <!-- About Section -->
-    <section class="about" id="about">
+
+    <!-- 3. Medical Services Section (Photo 3) -->
+    <section class="section-services">
         <div class="container">
-            <h2 class="section-title">About Gurunanak Dental Clinic</h2>
-            <div class="about-content">
-                <div>
-                    <h2>Excellence in Dental Care</h2>
-                    <p>Gurunanak Dental Clinic has been serving the Bilaspur community for over 5 years, providing comprehensive oral health solutions with a commitment to excellence and patient comfort.</p>
-                    <p>Our state-of-the-art facility is equipped with modern dental technology and staffed by experienced professionals dedicated to delivering the highest standard of care.</p>
+            <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary);">Clinical Services</h2>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Rheumatology & Arthritis</h3>
+                    <p>Diagnosis and treatment for Rheumatoid Arthritis, Osteoarthritis, Gout, Ankylosing Spondylitis, and autoimmune disorders.</p>
                 </div>
-                <div class="clinic-info">
-                    <h3>📍 Clinic Information</h3>
-                    <div class="info-item">
-                        <div class="info-icon">📌</div>
-                        <div>
-                            <strong>Location:</strong><br>
-                            Main Road, Near Dayalband Gurudwara<br>
-                            Dayalband, Bilaspur-495001<br>
-                            Chhattisgarh
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">📞</div>
-                        <div>
-                            <strong>Phone:</strong><br>
-                            <a href="tel:09606212725">09606212725</a>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">⏰</div>
-                        <div>
-                            <strong>Hours:</strong><br>
-                            Opens at 10:00 AM
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <div class="stars">★★★★★</div>
-                        <div>4.8/5 Rating</div>
-                        <div>21 Patient Reviews</div>
-                    </div>
+                <div class="card">
+                    <h3>Internal Medicine & Rehab</h3>
+                    <p>Comprehensive adult medical evaluations coupled with tailored physiotherapy programs for joint mobility and recovery.</p>
                 </div>
+            </div>
+
+            <div class="banner-wrap img-container">
+                <img src="3.png" alt="" class="responsive-img">
             </div>
         </div>
     </section>
-    
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Our Specialized Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🦷</div>
-                    <h3>Laser Dentistry</h3>
-                    <p>Advanced laser treatment for precision and comfort in various dental procedures</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">😁</div>
-                    <h3>Wisdom Tooth Extraction</h3>
-                    <p>Expert extraction of wisdom teeth with minimal discomfort and quick recovery</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🩺</div>
-                    <h3>Bleeding Gums Treatment</h3>
-                    <p>Comprehensive treatment for bleeding gums and gum disease management</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏥</div>
-                    <h3>Oral Surgery</h3>
-                    <p>Specialized surgical procedures for complex dental conditions</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">👄</div>
-                    <h3>Oral & Maxillofacial Care</h3>
-                    <p>Complete care for oral and facial structures with expert precision</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>Impacted Tooth Extraction</h3>
-                    <p>Specialized treatment for impacted teeth with advanced techniques</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="photo-gallery">
-  <div class="photo-card">
-    <img src="1.png" alt="Serenity Spa Front Signboard">
-   
-  </div>
-  
-  <div class="photo-card">
-    <img src="2.png" alt="Serenity Spa Interior">
-  
-  </div>
 
-  <div class="photo-card">
-    <img src="3.png" alt="Clinic Reception Desk">
-
-  </div>
-</div>
-
-
-
-
-    <!-- Highlights Section -->
-    <section class="highlights">
-        <div class="container">
-            <h2 class="section-title">Why Choose Us</h2>
-            <div class="highlights-grid">
-                <div class="highlight-box">
-                    <h3>✓ 5+ Years Experience</h3>
-                    <p>Serving the Bilaspur community with dedication and expertise in dental healthcare</p>
-                </div>
-                <div class="highlight-box">
-                    <h3>✓ Modern Equipment</h3>
-                    <p>State-of-the-art technology for accurate diagnosis and treatment</p>
-                </div>
-                <div class="highlight-box">
-                    <h3>✓ Expert Team</h3>
-                    <p>Highly skilled and experienced dental professionals</p>
-                </div>
-                <div class="highlight-box">
-                    <h3>✓ Patient Comfort</h3>
-                    <p>Comfortable clinic environment focused on your well-being</p>
-                </div>
-                <div class="highlight-box">
-                    <h3>✓ Hygienic Standards</h3>
-                    <p>Strict sterilization protocols and cleanliness standards</p>
-                </div>
-                <div class="highlight-box">
-                    <h3>✓ Affordable Care</h3>
-                    <p>Quality dental services at reasonable and transparent pricing</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Get in Touch</h2>
-            <div class="contact-content">
-                <div class="contact-item">
-                    <h3>📞 Call Us</h3>
-                    <p><a href="tel:09606212725">09606212725</a></p>
-                    <p>Available for appointments and inquiries</p>
-                </div>
-                <div class="contact-item">
-                    <h3>📍 Visit Us</h3>
-                    <p>Main Road, Near Dayalband Gurudwara</p>
-                    <p>Dayalband, Bilaspur-495001, Chhattisgarh</p>
-                </div>
-                <div class="contact-item">
-                    <h3>💬 WhatsApp</h3>
-                    <p><a href="https://wa.me/919606212725">Message Us on WhatsApp</a></p>
-                    <p>Quick response for your queries</p>
-                </div>
-            </div>
-            <div style="margin-top: 3rem;">
-                <p style="margin-bottom: 1rem;">📅 Hours: Opens at 10:00 AM</p>
-                <a href="tel:09606212725" class="cta-button" style="background: #ff6b6b;">Book Your Appointment Today</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
+    <!-- 4. Location & Timings Footer (Photo 4) -->
     <footer>
-        <p>&copy; 2026 Gurunanak Dental Clinic, Bilaspur. All Rights Reserved.</p>
-        <p
+        <div class="container footer-flex">
+            <div class="footer-info">
+                <h3>Location & Schedule</h3>
+                <p><strong>Address:</strong> Deshbandhu Press Gully, Near CMD College, Magarpara Road, Bilaspur, Chhattisgarh - 495001</p>
+                <p><strong>OPD Hours:</strong> Monday – Saturday: 9:00 AM – 5:00 PM & 6:00 PM – 9:00 PM</p>
+                <p><strong>Sunday:</strong> Closed</p>
+            </div>
+            <div class="footer-img-wrap img-container">
+                <img src="4.png" alt="" class="responsive-img">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Real-Time Status Script -->
+    <script>
+        function updateClinicStatus() {
+            const statusElement = document.getElementById('clinic-status');
+            const now = new Date();
+            
+            const options = { timeZone: 'Asia/Kolkata', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false };
+            const formatter = new Intl.DateTimeFormat('en-US', options);
+            const parts = formatter.formatToParts(now);
+            
+            let day = '', hour = 0, minute = 0;
+            parts.forEach(part => {
+                if (part.type === 'weekday') day = part.value;
+                if (part.type === 'hour') hour = parseInt(part.value, 10);
+                if (part.type === 'minute') minute = parseInt(part.value, 10);
+            });
+
+            const isSunday = (day === 'Sun');
+            const timeInMinutes = hour * 60 + minute;
+            const morningShift = (timeInMinutes >= 540 && timeInMinutes < 1020);
+            const eveningShift = (timeInMinutes >= 1080 && timeInMinutes < 1260);
+
+            if (!isSunday && (morningShift || eveningShift)) {
+                statusElement.textContent = '🟢 OPEN NOW';
+                statusElement.className = 'status-badge open';
+            } else {
+                statusElement.textContent = '🔴 CLOSED (Mon-Sat: 9AM-5PM, 6PM-9PM)';
+                statusElement.className = 'status-badge closed';
+            }
+        }
+        
+        updateClinicStatus();
+        setInterval(updateClinicStatus, 60000);
+    </script>
+</body>
+</html>
